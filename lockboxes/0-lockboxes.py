@@ -1,6 +1,12 @@
 #!/usr/bin/python3
+"""
+Module 0-lockboxes
+Contains a method to determine if all locked boxes can be opened.
+"""
+
 
 def canUnlockAll(boxes):
+    """Determines if all boxes can be opened."""
     boites_ouvertes = set([0])
     cles_a_verifier = [0]
 
