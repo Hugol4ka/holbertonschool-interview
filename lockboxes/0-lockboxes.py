@@ -7,6 +7,9 @@ Contains a method to determine if all locked boxes can be opened.
 
 def canUnlockAll(boxes):
     """Determines if all boxes can be opened."""
+    if not boxes:
+        return False
+
     boites_ouvertes = set([0])
     cles_a_verifier = [0]
 
