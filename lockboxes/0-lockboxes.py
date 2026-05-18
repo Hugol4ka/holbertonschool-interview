@@ -15,8 +15,9 @@ def canUnlockAll(boxes):
 
     while cles_a_verifier:
         boite_actuelle = cles_a_verifier.pop()
-        for cle in boxes[boite_actuelle]:
-            if cle not in boites_ouvertes:
-                boites_ouvertes.add(cle)
-                cles_a_verifier.append(cle)
+        if boite_actuelle < len(boxes):
+            for cle in boxes[boite_actuelle]:
+                if cle < len(boxes) and cle not in boites_ouvertes:
+                    boites_ouvertes.add(cle)
+                    cles_a_verifier.append(cle)
     return len(boites_ouvertes) == len(boxes)
