@@ -1,7 +1,14 @@
 #!/usr/bin/python3
+"""
+Module for calculating the minimum number of operation to achieve n characters.
+"""
+
 
 def minOperations(n):
-    """Calculate the minimum number of operation exactly n characteristics H"""
+    """
+    Calculate the fewest number of operations needed to result
+    in exactly n H characters.
+    """
     if n <= 1:
         return 0
 
