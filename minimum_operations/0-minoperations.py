@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 
 def minOperations(n):
-    """
-    Calculate the minimum number of operations to obtain
-    exactly n characteristics H
-    """
+    """Calculate the minimum number of operation exactly n characteristics H"""
     if n <= 1:
         return 0
 
