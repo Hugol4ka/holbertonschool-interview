@@ -53,6 +53,8 @@ if __name__ == "__main__":
                 print_stats(total_size, dict_status)
                 count = 0
 
+        print_stats(total_size, dict_status)
+
     except KeyboardInterrupt:
         print_stats(total_size, dict_status)
         raise
