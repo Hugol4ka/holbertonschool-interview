@@ -42,7 +42,7 @@ if __name__ == "__main__":
             words = line.strip().split(' ')
             try:
                 size = int(words[-1])
-                status = int(words[-2])
+                status = words[-2]
                 total_size += size
                 if status in dict_status:
                     count += 1
