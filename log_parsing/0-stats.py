@@ -37,25 +37,31 @@ if __name__ == "__main__":
             405: 0,
             500: 0,
         }
-    try:
-        for line in sys.stdin:
-            words = line.strip().split(' ')
-            try:
-                size = int(words[-1])
-                status = words[-2]
-                total_size += size
-                if status in dict_status:
-                    count += 1
-                    dict_status[status] += 1
-            except (ValueError, IndexError):
-                pass
 
-            if count == 10:
-                print_stats(total_size, dict_status)
-                count = 0
+try:
+    for line in sys.stdin:
 
-        print_stats(total_size, dict_status)
+        count += 1
 
-    except KeyboardInterrupt:
-        print_stats(total_size, dict_status)
-        raise
+        words = line.split()
+
+        try:
+
+            size = int(words[-1])
+            total_size += size
+
+            status = int(words[-2])
+            if status in dict_status:
+                dict_status[status] += 1
+        except (ValueError, IndexError):
+            pass
+
+        if count == 10:
+            print_stats(total_size, dict_status)
+            count = 0
+
+    print_stats(total_size, dict_status)
+
+except KeyboardInterrupt:
+    print_stats(total_size, dict_status)
+    raise
