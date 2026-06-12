@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Module 0-validate_utf8 Contains a method to determine
+if a given data set represents a valid UTF-8 encoding.
+"""
+
 
 def validUTF8(data):
     """Checks if a given data set represents a valid UTF-8 encoding."""
@@ -21,5 +26,5 @@ def validUTF8(data):
                 num_octets = 0
             else:
                 return False
-        
+
     return num_octets == 0
