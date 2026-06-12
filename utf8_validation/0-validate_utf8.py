@@ -10,7 +10,9 @@ def validUTF8(data):
     num_octets = 0
 
     for octet in data:
-
+        # On ne garde que les 8 bits de poids faible (efface les bits parasites)
+        octet = octet & 255
+        
         if num_octets > 0:
             if (octet >> 6) != 2:
                 return False
