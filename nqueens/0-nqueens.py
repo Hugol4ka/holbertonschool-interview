@@ -51,15 +51,14 @@ def solve_nqueens(n, row, board, solutions):
             solve_nqueens(n, row + 1, board, solutions)
 
 
-
 def main():
     n = parse_arguments()
     # board[r] stocke l'indice de colonne de la reine à la ligne r
     board = [-1] * n
     solutions = []
-    
+
     solve_nqueens(n, 0, board, solutions)
-    
+
     for sol in solutions:
         print(sol)
 
